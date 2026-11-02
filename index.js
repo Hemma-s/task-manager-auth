@@ -34,8 +34,9 @@ app.use('/api/tasks', taskRoutes);
 app.use('/api/auth', authRoutes);
 
 // Test route
+// Send visitors straight to the login page
 app.get('/', (req, res) => {
-  res.send('Server is running!');
+  res.redirect('/login.html');
 });
 
 // Start server
